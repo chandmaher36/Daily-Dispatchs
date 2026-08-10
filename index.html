@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Dispatchs — Independent Global News, Reported Straight</title>
+<meta name="description" content="Daily Dispatchs delivers fast, thorough coverage of world affairs, politics, business, technology, weather and security — reported straight, updated constantly.">
+<meta name="keywords" content="Daily Dispatchs, world news, breaking news, politics, security, weather, business news">
+<meta name="author" content="Daily Dispatchs">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Daily Dispatchs">
+<meta property="og:title" content="Daily Dispatchs — Independent Global News, Reported Straight">
+<meta property="og:description" content="Fast, thorough coverage of world affairs, politics, business, technology, weather and security.">
+<meta property="og:image" content="https://i.ibb.co/6cxJ3vkx/Firefighters-responding-to-refin-202608091459.jpg">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Daily Dispatchs — Independent Global News">
+<meta name="twitter:description" content="Fast, thorough coverage of world affairs, politics, business, technology, weather and security.">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a1f3d'/%3E%3Ctext x='50' y='68' font-size='60' fill='%23c8102e' text-anchor='middle' font-family='Georgia,serif' font-weight='bold'%3EDD%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,600&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3448877512660418"
+     crossorigin="anonymous"></script>
+
+<script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+</script>
+
+<amp-auto-ads type="adsense"
+        data-ad-client="ca-pub-3448877512660418">
+</amp-auto-ads>
+</head>
+<body>
+
+<!-- Skip link for accessibility -->
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<!-- ============ BREAKING NEWS TICKER ============ -->
+<div class="ticker-wrap" role="region" aria-label="Breaking news ticker">
+  <div class="ticker-label"><span class="ticker-dot"></span>BREAKING</div>
+  <div class="ticker-track-outer">
+    <div class="ticker-track" id="tickerTrack"><!-- populated by JS --></div>
+  </div>
+</div>
+
+<!-- ============ HEADER / MASTHEAD ============ -->
+<header class="masthead" id="siteHeader">
+  <div class="masthead-inner">
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <a href="#" class="logo" id="logoHome" aria-label="Daily Dispatchs — home">
+      <span class="wordmark"><span class="wm-daily">DAILY</span> <span class="wm-dispatches">DISPATCHS</span></span>
+    </a>
+
+    <div class="header-actions">
+      <div class="search-box">
+        <label for="searchInput" class="sr-only">Search articles</label>
+        <input type="search" id="searchInput" placeholder="Search headlines, topics, regions…" autocomplete="off">
+        <button id="searchClearBtn" class="search-clear" aria-label="Clear search" hidden>&times;</button>
+        <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
+    </div>
+  </div>
+
+  <nav class="main-nav" id="mainNav" aria-label="Primary">
+    <ul id="navList">
+      <!-- populated by JS: All + categories -->
+    </ul>
+  </nav>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<!-- ============ MAIN CONTENT ============ -->
+<main id="main-content">
+
+  <!-- Search results status -->
+  <div class="search-status-bar" id="searchStatusBar" hidden>
+    <div class="container">
+      <p id="searchStatusText"></p>
+    </div>
+  </div>
+
+  <!-- ============ FEATURED / LEAD SECTION ============ -->
+  <section class="featured-section" id="featuredSection">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Top Stories</h2>
+        <span class="section-rule"></span>
+      </div>
+      <div class="featured-grid" id="featuredGrid">
+        <!-- populated by JS: 1 lead + secondary stories -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CATEGORY FILTER BAR ============ -->
+  <section class="filter-bar-section">
+    <div class="container">
+      <div class="filter-bar" id="filterBar" role="tablist" aria-label="Filter articles by category">
+        <!-- populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LATEST NEWS GRID ============ -->
+  <section class="latest-section" id="latestSection">
+    <div class="container">
+      <div class="section-heading">
+        <h2 id="latestHeading">Latest News</h2>
+        <span class="section-rule"></span>
+        <span class="result-count" id="resultCount"></span>
+      </div>
+      <div class="news-grid" id="newsGrid">
+        <!-- populated by JS -->
+      </div>
+      <div class="no-results" id="noResults" hidden>
+        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.5"/><line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="11" x2="14" y2="11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <h3>No stories found</h3>
+        <p>We couldn't find anything matching your search. Try a different keyword or clear your filters.</p>
+        <button class="btn-outline" id="resetSearchBtn">Reset search &amp; filters</button>
+      </div>
+    </div>
+  </section>
+
+
+</main>
+
+<!-- ============ ARTICLE MODAL ============ -->
+<div class="modal-overlay" id="articleModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+  <div class="modal-panel">
+    <button class="modal-close" id="modalCloseBtn" aria-label="Close article">&times;</button>
+    <article class="modal-article" id="modalArticleContent">
+      <!-- populated by JS -->
+    </article>
+  </div>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-col footer-brand">
+      <a href="#" class="logo footer-logo">
+        <span class="wordmark footer-wordmark"><span class="wm-daily">DAILY</span> <span class="wm-dispatches">DISPATCHS</span></span>
+      </a>
+      <p>Independent global journalism covering world affairs, politics, business, technology, weather and security — reported straight, every single day.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Sections</h4>
+      <ul id="footerCategoryList"><!-- populated by JS --></ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#about" id="aboutLink" data-static="about">About Us</a></li>
+        <li><a href="#">Editorial Standards</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#contact" id="contactLink" data-static="contact">Contact Us</a></li>
+        <li><a href="#">Advertise</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#privacy" id="privacyLink" data-static="privacy">Privacy Policy</a></li>
+        <li><a href="#">Cookie Policy</a></li>
+        <li><a href="#">Corrections</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p>&copy; <span id="footerYear"></span> Daily Dispatchs. All rights reserved.</p>
+      <p class="footer-note">Daily Dispatchs is an independent digital newsroom.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ BACK TO TOP ============ -->
+<button id="backToTop" class="back-to-top" aria-label="Back to top" hidden>
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="6 11 12 5 18 11"/></svg>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
